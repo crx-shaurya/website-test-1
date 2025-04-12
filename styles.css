@@ -1,0 +1,141 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(to right, #1e1e1e, #333);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    perspective: 1000px;
+}
+
+.hero-content {
+    z-index: 2;
+    transform: rotateY(15deg);
+    transition: all 1s ease;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #ff6347;
+    margin-bottom: 10px;
+    animation: slideIn 2s ease-out;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #ddd;
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+
+.intro {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+
+.cta-btn {
+    text-decoration: none;
+    background-color: #ff6347;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #e03c2f;
+}
+
+.down-arrow {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+}
+
+.arrow {
+    width: 40px;
+    height: 40px;
+    border: solid 2px #fff;
+    border-width: 0 0 2px 2px;
+    transform: rotate(45deg);
+    animation: bounce 2s infinite;
+}
+
+/* About Section */
+.about {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    text-align: center;
+    padding: 20px;
+}
+
+.about h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+.cta-btn {
+    text-decoration: none;
+    background-color: #ff6347;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 25px;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
